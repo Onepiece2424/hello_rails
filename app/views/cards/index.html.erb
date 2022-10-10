@@ -3,7 +3,6 @@
 <table>
   <thead>
     <tr>
-      <th>持ち主</th>
       <th>カード記載の名前</th>
       <th>カード番号（末尾4桁）</th>
       <th>使用期限（年）</th>
@@ -17,7 +16,6 @@
   <tbody>
     <% @cards.each do |card| %>
       <tr>
-        <td></td>
         <td><%= card.name %></td>
         <td><%= card.last4 %></td>
         <td><%= card.exp_year %></td>

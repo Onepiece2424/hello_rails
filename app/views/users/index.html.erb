@@ -1,0 +1,33 @@
+<h1>ユーザー情報一覧</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>アドレス</th>
+      <th>ユーザー名</th>
+      <th>詳細</th>
+      <th>編集</th>
+      <th>削除</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.id %></td>
+        <td><%= user.email %></td>
+        <td><%= user.username %></td>
+        <td><%= link_to 'Show', user %></td>
+        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'ユーザー情報を削除してもいいですか?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+<br>
+<%= link_to "カード情報一覧へ", cards_path %>
+<br>
+<br>
+<%= link_to "タスク一覧へ", tasks_path %>

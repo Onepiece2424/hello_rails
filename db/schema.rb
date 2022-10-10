@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_10_10_083415) do
+ActiveRecord::Schema.define(version: 2022_10_10_092835) do
 
   create_table "authors", force: :cascade do |t|
     t.string "name"
@@ -46,6 +46,8 @@ ActiveRecord::Schema.define(version: 2022_10_10_083415) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "user_id"
+    t.integer "users_id"
+    t.index ["users_id"], name: "index_cards_on_users_id"
   end
 
   create_table "publishers", force: :cascade do |t|
@@ -71,6 +73,8 @@ ActiveRecord::Schema.define(version: 2022_10_10_083415) do
     t.datetime "updated_at", precision: 6, null: false
     t.integer "card_id"
     t.string "username"
+    t.integer "cards_id"
+    t.index ["cards_id"], name: "index_users_on_cards_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
@@ -78,4 +82,6 @@ ActiveRecord::Schema.define(version: 2022_10_10_083415) do
   add_foreign_key "book_authors", "authors"
   add_foreign_key "book_authors", "books"
   add_foreign_key "books", "publishers"
+  add_foreign_key "cards", "users", column: "users_id"
+  add_foreign_key "users", "cards", column: "cards_id"
 end

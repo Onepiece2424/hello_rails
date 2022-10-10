@@ -4,5 +4,5 @@ Rails.application.routes.draw do
     sessions: 'users/sessions',
     registrations: 'users/registrations'
   }
-  resources :tasks, :cards, :users
+  resources :tasks, :cards, :users, :books
 end

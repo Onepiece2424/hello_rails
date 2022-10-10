@@ -58,3 +58,4 @@ gem 'dotenv-rails'
 gem 'recaptcha',  require: "recaptcha/rails"
 gem 'devise'
 gem 'pry-rails'
+gem 'rails-i18n'

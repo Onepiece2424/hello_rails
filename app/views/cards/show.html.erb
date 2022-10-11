@@ -1,0 +1,23 @@
+<h1>カード詳細ページ</h1>
+<table>
+  <thead>
+    <tr>
+      <th>カード記載の名前</th>
+      <th>カード番号（末尾4桁）</th>
+      <th>使用期限（年）</th>
+      <th>使用期限（月）</th>
+    </tr>
+  </thead>
+
+  <tbody>
+      <tr>
+        <td><%= @card.name %></td>
+        <td><%= @card.last4 %></td>
+        <td><%= @card.exp_year %></td>
+        <td><%= @card.exp_month %></td>
+      </tr>
+  </tbody>
+</table>
+<br>
+<br>
+<%= link_to "カード一覧へ", cards_path %>

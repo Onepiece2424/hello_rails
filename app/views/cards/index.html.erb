@@ -1,0 +1,36 @@
+<h1>カード一覧表示ページ</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>カード記載の名前</th>
+      <th>カード番号（末尾4桁）</th>
+      <th>使用期限（年）</th>
+      <th>使用期限（月）</th>
+      <th>詳細</th>
+      <th>編集</th>
+      <th>削除</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cards.each do |card| %>
+      <tr>
+        <td><%= card.name %></td>
+        <td><%= card.last4 %></td>
+        <td><%= card.exp_year %></td>
+        <td><%= card.exp_month %></td>
+        <td><%= link_to 'Show', card %></td>
+        <td><%= link_to 'Edit', edit_card_path(card) %></td>
+        <td><%= link_to 'Destroy', card, method: :delete, data: { confirm: 'カード登録を削除してもいいですか?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+<br>
+<%= link_to "カード登録へ", new_card_path %>
+<%= link_to "ユーザー情報一覧へ", users_path %>
+<br>
+<br>
+<%= link_to "タスク一覧へ", tasks_path %>

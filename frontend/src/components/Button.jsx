@@ -4,13 +4,9 @@ const Button = () => {
   const [count, setCount] = useState(0)
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      console.log(count)
-    }, 2000);
-    return () => {
-      clearInterval(timer)
-    }
-  }, [count])
+    console.log("called");
+  }, [count]);
+
   return (
   <>
     <br></br>

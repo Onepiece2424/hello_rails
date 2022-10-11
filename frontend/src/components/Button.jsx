@@ -1,7 +1,16 @@
-import {useState} from "react"
+import { useState, useEffect} from "react"
 
 const Button = () => {
   const [count, setCount] = useState(0)
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      console.log(count)
+    }, 2000);
+    return () => {
+      clearInterval(timer)
+    }
+  }, [count])
   return (
   <>
     <br></br>
@@ -15,4 +24,4 @@ const Button = () => {
   )
 }
 
-export default Button;
+export default Button

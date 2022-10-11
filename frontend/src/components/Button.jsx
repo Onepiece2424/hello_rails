@@ -9,7 +9,7 @@ const Button = () => {
 
   // countが変更されるたびに処理が実行される
   useEffect(() => {
-    console.log("called");
+    setTimeout(() => { console.log("called")}, 2000)
   }, [count]);
 
   return (

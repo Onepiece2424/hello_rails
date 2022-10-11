@@ -4,6 +4,11 @@ const Button = () => {
   const [count, setCount] = useState(0)
 
   useEffect(() => {
+    console.log("初回レンダリング時のみの表記です。")
+  }, [])
+
+  // countが変更されるたびに処理が実行される
+  useEffect(() => {
     console.log("called");
   }, [count]);
 

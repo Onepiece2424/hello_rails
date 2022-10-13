@@ -9,7 +9,6 @@ function App() {
     <>
       <Button />
       <OnOff />
-      <OnOff />
       <br></br>
       <br></br>
       {

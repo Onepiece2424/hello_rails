@@ -25,7 +25,6 @@ const Button = () => {
     <p>カウント数:{count}</p>
     <br></br>
     <br></br>
-    <button disabled={disable} onClick={() => setDisable(!disable)}>{disable ? "hide" : "show"}</button>
   </>
   )
 }

@@ -3,7 +3,7 @@ import Button from "./components/Button"
 import OnOff from "./components/OnOff"
 import Recapture from "./components/Recapture"
 
-function App(props) {
+function App() {
   const [recapture, setRecapture] = useState(0)
   return (
     <>
@@ -13,10 +13,12 @@ function App(props) {
       <br></br>
       <br></br>
       {
-      (recapture % 3 === 0) &&    // 3の倍数の時にリキャプチャ表示
-        <Recapture />
+      recapture === 3 &&
+        <Recapture
+          onChange={() => setRecapture(recapture + 1)}
+        />
       }
-      <button onClick={() => setRecapture(recapture + 1)}>登録{recapture}</button>
+      <button disabled={true && recapture >=3} onClick={() => setRecapture(recapture + 1)}>登録{recapture}</button>
     </>
   )
 }

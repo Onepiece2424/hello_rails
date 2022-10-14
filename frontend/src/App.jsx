@@ -8,7 +8,7 @@ import Picnic from "./components/Picnic"
 function App() {
   const [recapture, setRecapture] = useState(0)
 
-  const fun = '楽しい'
+  // const fun = '楽しい'
 
   return (
     <>
@@ -25,7 +25,7 @@ function App() {
       <button disabled={true && recapture >=3} onClick={() => setRecapture(recapture + 1)}>登録{recapture}</button>
       <br></br>
       <br></br>
-      <Picnic emotion={fun} titleStyle={{backgroundColor: "pink"}} title="リンゴ🍎" />
+      <Picnic emotion="楽しい" titleStyle={{backgroundColor: "pink"}} title="リンゴ🍎" />
     </>
   )
 }

@@ -8,8 +8,6 @@ import Picnic from "./components/Picnic"
 function App() {
   const [recapture, setRecapture] = useState(0)
 
-  // const fun = '楽しい'
-
   return (
     <>
       <Button />

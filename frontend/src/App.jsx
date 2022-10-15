@@ -18,10 +18,10 @@ function App() {
       <OnOff />
       <br></br>
       <br></br>
+      {recapture >= 1 && <p>↓{recapture}回クリック中</p>}
       { recapture === 3 &&
         <Recapture handleInputTextChange={() => handleInputTextChange(0)} />
       }
-      <p>↓{recapture}回クリック中</p>
       <button disabled={true && recapture >=3} onClick={() => setRecapture(recapture + 1)}>登録</button>
       <br></br>
       <br></br>

@@ -5,7 +5,7 @@ const Recapture = (props) => {
   return(
     <>
       <p>リキャプチャだよ。</p>
-      <p>ここをチェックしてね。</p>
+      <p>***□をクリックしてね。***</p>
       <div>
         <input type="checkbox" onChange={() => props.handleInputTextChange()}></input>
         <label>リキャプチャチェック</label>

@@ -1,11 +1,15 @@
-import { useState, useEffect} from "react"
+import { useState, useEffect, useRef} from "react"
 
 const Button = () => {
   const [count, setCount] = useState(0)
-  const [disable, setDisable] = useState(false)
+  const renderFlgRef = useRef(false)
 
   useEffect(() => {
-    console.log("初回レンダリング時のみの表記です。")
+    if(renderFlgRef.current) {
+      console.log("初回レンダリング時のみの表記です。")
+    } else {
+      renderFlgRef.current = true
+    }
   }, [])
 
   // countが変更されるたびに処理が実行される

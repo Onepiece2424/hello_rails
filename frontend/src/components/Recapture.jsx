@@ -1,12 +1,13 @@
 import React from "react"
 
-const Recapture = () => {
+const Recapture = (props) => {
+
   return(
     <>
       <p>リキャプチャだよ。</p>
       <p>ここをチェックしてね。</p>
       <div>
-        <input type="checkbox"></input>
+        <input type="checkbox" onChange={() => props.handleInputTextChange()}></input>
         <label>リキャプチャチェック</label>
       </div>
     </>

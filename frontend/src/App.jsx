@@ -8,19 +8,21 @@ import Picnic from "./components/Picnic"
 function App() {
   const [recapture, setRecapture] = useState(0)
 
+  function handleInputTextChange(text) {
+    setRecapture(text);
+  }
+
   return (
     <>
       <Button />
       <OnOff />
       <br></br>
       <br></br>
-      {
-      recapture === 3 &&
-        <Recapture
-          onChange={() => setRecapture(recapture + 1)}
-        />
+      { recapture === 3 &&
+        <Recapture handleInputTextChange={() => handleInputTextChange(0)} />
       }
-      <button disabled={true && recapture >=3} onClick={() => setRecapture(recapture + 1)}>登録{recapture}</button>
+      <p>↓{recapture}回クリック中</p>
+      <button disabled={true && recapture >=3} onClick={() => setRecapture(recapture + 1)}>登録</button>
       <br></br>
       <br></br>
       <Picnic emotion="楽しい" titleStyle={{backgroundColor: "pink"}} title="リンゴ🍎" color="blue" />

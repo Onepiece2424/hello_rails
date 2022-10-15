@@ -23,7 +23,7 @@ function App() {
       <button disabled={true && recapture >=3} onClick={() => setRecapture(recapture + 1)}>登録{recapture}</button>
       <br></br>
       <br></br>
-      <Picnic emotion="楽しい" titleStyle={{backgroundColor: "pink"}} title="リンゴ🍎" />
+      <Picnic emotion="楽しい" titleStyle={{backgroundColor: "pink"}} title="リンゴ🍎" color="blue" />
     </>
   )
 }

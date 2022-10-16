@@ -2,15 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import { createStore } from 'redux'
+import createStore from './reducks/store/store'
 import { Provider } from 'react-redux'
-import reducer from './reducers/reducer'
 
-const store = createStore(reducer)
+export const store = createStore();   // storeが作られる。
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <Provider store={store}>
     <App />
-  </Provider>
+  </Provider>,
+  document.getElementById('root'),
 )

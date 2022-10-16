@@ -2,10 +2,16 @@ import React,{ useState } from "react"
 import Button from "./components/Button"
 import OnOff from "./components/OnOff"
 import Recapture from "./components/Recapture"
-
 import Picnic from "./components/Picnic"
 
+import { useSelector, useDispatch} from "react-redux"
+
 function App() {
+  const dispatch = useDispatch()
+  const selector = useSelector((state) => state)
+
+  console.log(selector.users)
+
   const [recapture, setRecapture] = useState(0)
 
   function handleInputTextChange(text) {
@@ -26,6 +32,9 @@ function App() {
       <br></br>
       <br></br>
       <Picnic emotion="楽しい" titleStyle={{backgroundColor: "pink"}} title="リンゴ🍎" color="blue" />
+      <br></br>
+      <br></br>
+      <button onClick={() => dispatch(signInAction({uid: "00001", username: "torahack"}))}>Sign In</button>
     </>
   )
 }

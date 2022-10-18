@@ -1,8 +1,8 @@
 export const initialState = {
   users: {
       isSignedIn: false,
-      uid: "",
-      username: ""
+      uid: "1",
+      username: "あああああ"
   }
 };
 

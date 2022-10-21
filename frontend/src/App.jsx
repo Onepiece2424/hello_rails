@@ -4,7 +4,7 @@ import OnOff from "./components/OnOff"
 import Recapture from "./components/Recapture"
 import Picnic from "./components/Picnic"
 
-import { useSelector, useDispatch} from "react-redux"
+import { useSelector, useDispatch } from "react-redux"
 
 function App() {
   const dispatch = useDispatch()
@@ -34,7 +34,6 @@ function App() {
       <Picnic emotion="楽しい" titleStyle={{backgroundColor: "pink"}} title="リンゴ🍎" color="blue" />
       <br></br>
       <br></br>
-      <button onClick={() => dispatch(signInAction({uid: "00001", username: "torahack"}))}>Sign In</button>
     </>
   )
 }

@@ -5,6 +5,7 @@ import Recapture from "./components/Recapture"
 import Picnic from "./components/Picnic"
 
 import { useSelector, useDispatch } from "react-redux"
+import { signInAction } from "./reducks/users/actions"
 
 function App() {
   const dispatch = useDispatch()
@@ -34,6 +35,7 @@ function App() {
       <Picnic emotion="楽しい" titleStyle={{backgroundColor: "pink"}} title="リンゴ🍎" color="blue" />
       <br></br>
       <br></br>
+      <button onClick={() => dispatch(signInAction({uid: "0001", username: "trahack"}))}>Sign in</button>
     </>
   )
 }

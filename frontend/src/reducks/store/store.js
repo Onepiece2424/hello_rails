@@ -1,6 +1,7 @@
-import {createStore as reduxCreateStore,combineReducers} from 'redux';
+import {createStore as reduxCreateStore
+    ,combineReducers,} from 'redux';
 
-import {UsersReducer} from './reducers';
+import {UsersReducer} from '../users/reducers';
 
 export default function createStore() {
   return reduxCreateStore( // オリジナル createStore の別名

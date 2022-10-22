@@ -4,12 +4,17 @@ import './index.css';
 import App from './App';
 import createStore from './reducks/store/store'
 import { Provider } from 'react-redux'
+import * as History from 'history'
+import {BrowserRouter as Router} from 'react-router-dom';
 
-export const store = createStore();   // storeが作られる。
+const history = History.createBrowserHistory();
+export const store = createStore(history);   // storeが作られる。
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <Router history={history}>
+      <App />
+    </Router>
   </Provider>,
   document.getElementById('root'),
 )

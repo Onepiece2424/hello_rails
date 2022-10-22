@@ -12,16 +12,18 @@ import PropTypes from "prop-types"
 
 const HelloWorld = (props) => {
   const greeting = props.greeting
-
+  const users = props.users[0]
   return (
     <>
-      Greeting: {greeting}
+      <h2>Greeting: {greeting}</h2>
+      <h2>ユーザー名:{users.username}</h2>
     </>
   )
 }
 
 HelloWorld.propTypes = {
-  greeting: PropTypes.string
+  greeting: PropTypes.string,
+  user: PropTypes.string
 };
 
 export default HelloWorld

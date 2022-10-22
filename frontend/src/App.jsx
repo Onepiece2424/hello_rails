@@ -3,7 +3,6 @@ import Button from "./components/Button"
 import OnOff from "./components/OnOff"
 import Recapture from "./components/Recapture"
 import Picnic from "./components/Picnic"
-import Router from './Router'
 
 import { useSelector, useDispatch } from "react-redux"
 import { signInAction } from "./reducks/users/actions"
@@ -39,7 +38,6 @@ function App() {
       <button onClick={() => dispatch(signInAction({uid: "0001", username: "trahack"}))}>Sign in</button>
       <br></br>
       <br></br>
-      <Router />
     </>
   )
 }

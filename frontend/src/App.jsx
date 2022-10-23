@@ -1,11 +1,11 @@
 import React,{ useState } from "react"
-// import Button from "./components/Button"
-// import OnOff from "./components/OnOff"
-// import Recapture from "./components/Recapture"
-// import Picnic from "./components/Picnic"
+import Button from "./components/Button"
+import OnOff from "./components/OnOff"
+import Recapture from "./components/Recapture"
+import Picnic from "./components/Picnic"
 
 import { useSelector, useDispatch } from "react-redux"
-// import { signInAction } from "./reducks/users/actions"
+import { signInAction } from "./reducks/users/actions"
 
 import Home from "./components/Home";
 import Register from "./components/Register";
@@ -28,7 +28,7 @@ function App() {
 
   return (
     <>
-      {/* <Button />
+      <Button />
       <OnOff />
       <br></br>
       <br></br>
@@ -44,7 +44,7 @@ function App() {
       <br></br>
       <button onClick={() => dispatch(signInAction({uid: "0001", username: "trahack"}))}>Sign in</button>
       <br></br>
-      <br></br> */}
+      <br></br>
       <BrowserRouter>
       <Routes>
         <Route path={`/`} element={<Home />} />
